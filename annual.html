@@ -5,8 +5,10 @@
         <style>
         body * {
             font-family: "Myriad Pro",Myriad,"Liberation Sans","Nimbus Sans L","Helvetica Neue";
-            margin-left: 0.5em;
+            /* margin-left: 0.5em; */
             letter-spacing: 0.08em;
+            /* text-align: justify; */
+            text-justify: inter-ideograph;
             /* line-height: 1.3em; */
         }
         span {
@@ -17,8 +19,9 @@
         }
         a {
             text-decoration: none;
+            /* color: blue; */
         }
-        a:visited {
+        main a:visited {
             color: blue;
         }
         button {
@@ -26,16 +29,64 @@
             bottom: 5%;
             right: 5%;
             background-color: khaki;
-            border: khaki;
+            border: 2px khaki;
+        }
+         body {
+            display: flex;
+            flex-direction: column;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+        nav {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            background: white;
+            width: 100%;
+        }
+        nav section {
+            display: flex;
+            flex-direction: row;
+        }
+        nav a {
+            background-color: gold;
+            margin: 0 0 10px 15px;
+            padding: 8px 20px;
+            color: honeydew;
+        }
+        main {
+            background-color: white;
+            margin-top: 60px;
+        }
+        h3 {
+            color: tomato;
+        }
+        @media screen and (max-width: 568px) {
+            nav {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            }
+            nav section {
+                margin-left: -15px;
+            }
+            main {
+                background-color: white;
+                margin-top: 100px;
+            }
         }
         </style>
     </head>
     <body>
-        <h2>实务学堂年会设想 2020</h2>
         <nav id="navagation">
-            <a href="#summary">概要</a>
-            <a href="#activities">内容</a>
-            <a href="#preparation">筹备</a>
+            <h2>实务学堂年会设想 2020</h2>
+            <section>
+                <a href="#summary">概要</a>
+                <a href="#activities">内容</a>
+                <a href="#preparation">筹备</a>
+            </section>
         </nav>
         <main>
             <!--  概要  -->
@@ -189,6 +240,7 @@
                 </section>
             </section>
     </main>
+    <!-- 返回顶部 -->
     <button>
         <a href="#navagation">返回顶部</a>
     </button>
